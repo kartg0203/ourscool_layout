@@ -1,0 +1,60 @@
+/* CSS Document  for mobile  since 2017/09/14 */
+
+/*
+@media only screen and (min-width: 600px){
+            .ui-page {
+                width: 600px !important;
+                margin: 0 auto !important;
+                position: relative !important;
+                border-right: 0px #666 outset !important;
+                border-left: 0px #666 outset !important;
+            }
+            .ui-header {
+                width: 600px !important;
+                margin: 0 auto !important;
+                position: relative !important;
+                border-right: 0px #666 outset !important;
+                border-left: 0px #666 outset !important;
+            }
+            .ui-footer {
+                width: 600px !important;
+                margin: 0 auto !important;
+                position: relative !important;
+                border-right: 0px #666 outset !important;
+                border-left: 0px #666 outset !important;
+            }
+
+ }
+ 
+ .ui-header .ui-title { margin-left: 1em; margin-right: 1em; font-size:18px; }
+.ui-footer .ui-title { margin-left: 1em; margin-right: 1em; font-size:13px; }
+
+
+.ui-icon-myicon{background-color: transparent;background:url(<?=UPATH.ShareLib_IMAGE?>menu_btnS.png) no-repeat; width:24px; height:24px;border: none; }
+
+.ui-panel-inner {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+ 
+ */
+ 
+ ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color:#CCCCCC;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color:#CCCCCC;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color:#CCCCCC;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color:#CCCCCC;
+}
+

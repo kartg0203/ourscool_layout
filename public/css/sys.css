@@ -1,0 +1,742 @@
+@charset "utf-8";
+/* CSS Document */
+/*\STYLE*/
+.MainBTN{font-size:15px; color:#6A6A6A; font-weight:bold; text-align:center; }
+.SHOW_USER_BAR{font-size: 15px; color:#FFFFFF;}
+.Status_bar{font-size: 13px; color:#505B8B}
+.Search_bar{font-size: 13px; background-color:#FFCCCC; z-index:99;}
+.noborder{border:none;}
+.nobg{background:none;}
+
+.sys_set_filter50 {filter=alpha(opacity=50);}
+.sys_status_on {color: #0033CC}  /*資料狀態啟用*/
+.sys_status_off {color:#990000} /*資料狀態停用*/
+.sys_rec_count {color: #FF0000}  /*資料筆數顯示*/
+
+/*回主頁CSS*/
+.returnBTN{color:#FFFF33;}
+a.returnBTN:link{color:#FFFF33;text-decoration: none}
+a.returnBTN:visited{color:#FFFF33;text-decoration: none}
+a.returnBTN:hover{color:#FFFF99;text-decoration:underline}
+a.returnBTN:active{color:#FFFF99;text-decoration:underline}
+
+/*資料列交叉顏色*/
+.CROSS_COLOR1{ background-color:#FFFFFF;}
+.CROSS_COLOR2{ background-color:#EDF0F3;}
+
+
+/*font style*/
+.W12{font-size: 12px;}
+.W13{font-size: 13px;}
+.W14{font-size: 14px;}
+.W15{font-size: 15px;}
+.W16{font-size: 16px;}
+.W18{font-size: 18px;}
+.W20{font-size: 20px;}
+.TB20{font-size:24px}
+.TB21{font-size:26px}
+.WB{font-weight:bold}
+.font_CH{ font-family:"標楷體"}
+.FCWhite{color:#FFFFFF;}
+.FCGray{color:#959595;}
+/*捲軸樣式*/
+.body{
+    /*
+	scrollbar-3dlight-color:#C0CFD6;
+	scrollbar-arrow-color:#ff0;
+	scrollbar-base-color:#FFFFFF;
+	scrollbar-darkshadow-color:#C0CFD6;
+	scrollbar-face-color:#C0CFD6;
+	scrollbar-highlight-color:#FFFFFF;
+	scrollbar-shadow-color:#FFFFFF;
+	*/
+
+    SCROLLBAR-FACE-COLOR: #cccccc;
+    SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+    SCROLLBAR-SHADOW-COLOR: #999999;
+    SCROLLBAR-3DLIGHT-COLOR: #999999;
+    SCROLLBAR-ARROW-COLOR: #ffffff;
+    SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+    SCROLLBAR-BASE-COLOR: #999999;
+    SCROLLBAR-TRACK-COLOR: #E3E3E3;
+	font-size:12px;
+
+}
+
+/*資料排序*/
+.sort {font:13px Marlett;line-height:15px;cursor:pointer;}
+.sort_no {font:13px Marlett;line-height:15px; color:#aaa;}
+
+/*頁籤顯示樣式-------------------*/
+.page_num {
+	font-size: 12px;
+	line-height: 20px;
+	color: #5379D0;
+	text-decoration: none;
+	border: 1px solid #CCC;
+	margin: 2px;
+	padding-right: 3px;
+	padding-left: 3px;
+}
+.page_num-now {
+	font-size: 12px;
+	line-height: 20px;
+	color: #FFF;
+	text-decoration: none;
+	border: 1px solid #5379D0;
+	margin: 2px;
+	padding-right: 3px;
+	padding-left: 3px;
+	background-color: #5379D0;
+}
+/*------------------------------*/
+
+/*popupDIV 樣式-----------------*/
+#backgroundPopup{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	background:#000000;
+	border:1px solid #cecece;
+	z-index:999;
+}
+#popupWin{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	/*height:200px;
+	width:200px;*/
+	background:#FFFFFF;
+	border:3px solid #cecece;
+	border-radius:10px;
+	z-index:9999;
+	padding-left:1px;
+	padding-right:1px;
+	padding-bottom:1px;
+	padding-top:10px;
+	font-size:13px;
+	font-family:inherit;
+	font-weight:inherit;
+	margin:2pt;
+	vertical-align:baseline;
+	box-shadow: 3px 3px 3px #666666;
+	text-align:center;
+}
+#popupWin h1{
+	text-align:left;
+	background-color:#C0CFD6;
+	color:#336699;
+	font-size:12px;
+	font-weight:300;
+	border-bottom:1px dotted #D3D3D3;
+	border-top:1px dotted #D3D3D3;
+	margin-bottom:10px;
+
+}
+#popupLoadingDiv{
+    font-size:16px;
+	color:#FF6633;
+	background-color:#FFFFFF;
+	padding-left:6px;
+	padding-top:2px;
+	font-weight:bold;
+    z-index:100000;
+    position:absolute;
+	width:80px;
+	height:30px;
+	border:solid #6699CC 2px;
+
+}
+
+#popupClose{
+	font-size:12px;
+	position:absolute;
+	color:#FF0000;
+	cursor:pointer;
+	right:3px;
+	top:3px;
+	border:none;
+	width:19;
+	height:19;
+
+}
+
+#popupTip{
+	font-size:12px;
+	position:absolute;
+	color:#FF0000;
+
+	top:-14px;
+	border:none;
+	width:30;
+	height:16;
+
+}
+
+/*------------------------------*/
+
+/*編輯按鈕樣式------------------*/
+/* addnew、mod、del、sure_new、sure_mod */
+.addnew{border: 1px solid #CCCCCC; background-color:#FFFFFF; cursor:pointer;padding-top:2px; padding-left:20px; background-image:url(../images/button_addnew_bg2.jpg);no-repeat;height:25px;}
+.mod{border: 1px solid #CCCCCC; background-color:#FFFFFF; cursor:pointer;padding-top:2px; background-image:url(../images/button_mod_bg.jpg);}
+.del{border: 1px solid #CCCCCC; background-color: #FFFFFF; cursor:pointer;padding-top:2px; background-image:url(../images/button_del_bg.jpg);}
+.sure_new{border: 1px solid #CCCCCC; background-color: #FFFFFF; cursor:pointer;padding-top:2px; background-image:url(../images/button_addnew_bg.jpg);}
+.sure_mod{border: 1px solid #CCCCCC; background-color: #FFFFFF; cursor:pointer;padding-top:2px; background-image:url(../images/button_mod_bg.jpg);}
+.search{border: 1px solid #FF6633; background-color: #FFFFFF; cursor:pointer;padding-top:2px;padding-left:20px; background-image:url(../images/button_search_bg2.jpg); background-repeat:no-repeat; width:60px;height:27px;text-align:right;padding-right:3px;}
+.reset{border: 1px solid #CCCCCC; background-color: #FFFFFF; cursor:pointer;padding-top:1px; background-image:url(../images/button_reset_bg.jpg);}
+.query{ font-weight:bold;border: 1px solid #CCCCCC; background-color: #FFFFFF; cursor:pointer;padding-top:1px; background-image:url(../images/button_qry_bg.jpg); padding-right:3px; }
+.gbtn{border: 1px solid #CCCCCC; background-color:#FFFFFF; cursor:pointer;padding-top:2px; background-image:url(../images/button_mod_bg.jpg);}
+.sure_prt{border: 1px solid #006699; background-color: #FFFFFF; cursor:pointer;padding-top:2px; margin-left:0px; background-image:url(../images/button_addnew_bg.jpg); height:25px;}
+
+/*-------------------------------*/
+
+/*input style*/
+.input_text{background-color:#FFFFFF; border:#B1CAAE solid 1px;}
+.required_Input{border:#B1CAAE solid 1px; background-image:url(../images/required_tag.gif); background-repeat:no-repeat; background-position:top right;border-radius:5px;}
+.required_symbol{color:#FF0000;}
+
+/*Tab style*/
+.tab_m{ margin-left:-2px; margin-top:0px;}
+.tab_on{ border-left:1px solid #999999;border-top:1px solid #999999;border-right:1px solid #999999;border-bottom:2px solid #A7B830; background-color:#A7B830; color:#FFFF00; font-weight:bolder;}
+.tab_off{ border-bottom:2px solid #FFFFFF; border-left:2px solid #FFFFFF;border-right:2px solid #FFFFFF; background-color:#CDDA72; color:#FFFFFF; cursor:pointer;}
+.tab_base{ height:3px; background-color:#A7B830;}
+
+/*Validate*/
+.ValidateNew{color:#FF3333; font-weight:bold; font-size:12px;}
+
+/*report_css*/
+.rpt_Title1{font-family: "標楷體";	font-size: 24px;}
+.previewTitle{font-size: 16;color: #FFFFFF;}
+.prnTable{ border:#FF6633 solid 1px;}
+
+
+/*border style*/
+.bottom_dotted{
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	border-color: #999999;
+}
+.bottom_solid{
+	border-bottom-style:solid;
+	border-bottom-width: 1px;
+	border-color: #999999;
+}
+.bottom_solid2{
+	border-bottom-style:solid;
+	border-bottom-width: 2px;
+	border-color:#000000;
+}
+.bottom_solid3{
+	border-bottom-style:solid;
+	border-bottom-width: 1px;
+	border-color: #999999;
+}
+.bottom_solid4{
+    font-size:15px;
+
+}
+.top_dotted{
+	border-top-style: dotted;
+	border-top-width: 1px;
+	border-color: #999999;
+}
+
+/*block tag word*/
+.BTW1{color:#FFFFFF; background-color:#FF6600; display:inline-block;border-radius:6px;padding:2px;}
+.BTW2{color:#FFFFFF; background-color:#3399CC; display:inline-block;border-radius:6px;padding:2px;}
+.BTW3{color:#FFFFFF; background-color:#D3D3D3; display:inline-block;border-radius:6px;padding:2px;}
+.BTW4{color:#FFFFFF; background-color:#FFCCCC; display:inline-block;border-radius:6px;padding:2px;}
+.BTW5{color:#FFFFFF; background-color:#40B343; display:inline-block;border-radius:6px;padding:2px;}
+.BTW6{color:#FFFFFF; background-color:#E3C23E; display:inline-block;border-radius:6px;padding:2px;}
+
+/*data row mouseover highligth*/
+.row_over{background-color:#FFFF99;}
+
+.crtdate{color:#FF6633; font-size:13px;}
+.crtdate2{color:#3399CC; font-size:13px;}
+.stitle1{color:#53B445; font-size:16px; font-weight:bold;}
+.stitle2{color:#1B55C0; font-size:16px; font-weight:bold;}
+.stitle3{color:#FF6633; font-size:16px; font-weight:bold;}
+.scontent1{color:#000000; font-size:14px;}
+.scontent2{color:#666666; font-size:13px;}
+.shead1{color:#999999; font-size:13px;}
+.shref{color:#5CB167;font-size:13px;}
+.sbtn1{border:1px #666666 solid; background-color:#F0F0F0; color:#666666; cursor:pointer;}
+.menu_split{ border-right:#000000 1px solid; padding-left:10px; padding-right:10px;}
+.menu_split_end{ padding-left:10px; padding-right:10px;}
+.menu_active{font-size:18px; color:#CC3366; font-weight:700;}
+
+.BD1{border:#CCCCCC 1px solid;}
+.BD2{border:#CCCCCC 2px solid;}
+.BDd1{border:#CCCCCC 1px dotted;}
+.BDd2{border:#CCCCCC 2px dotted;}
+.BBDd1{border-bottom:#CCCCCC 1px dotted;}
+
+
+.PD3{padding:3px;}
+.PD5{padding:5px;}
+.PD8{padding:8px;}
+.PD10{padding:10px;}
+.LPD3{ padding-left:3px;}
+.LPD5{ padding-left:5px;}
+.RPD3{ padding-right:3px;}
+.RPD5{ padding-right:5px;}
+
+.TBDRD5{ border-radius:5px 5px 0px 0px;}
+.BBDRD5{ border-radius:0px 0px 5px 5px;}
+
+.BDRD3{ border-radius:3px;}
+.BDRD5{ border-radius:5px;}
+.BDRD8{ border-radius:8px;}
+.BDRD10{ border-radius:10px;}
+.BDRD15{ border-radius:15px;}
+.BDRD50{ border-radius:50px;}
+
+.BXSD1{box-shadow: 1px 1px 3px #999999;}
+.BXSD2{box-shadow: 2px 2px 4px #999999;}
+.BXSD5{box-shadow: 5px 5px 8px #999999;}
+.BXSD1L{box-shadow: 1px 1px 3px #999999;}
+.BXSD1R{box-shadow: -1px 1px 3px #999999;}
+
+
+/*all FBar element style*/
+#FBar table, input, select, textarea {border-radius:5px; border:1px solid #CCCCCC;}
+#FBar tr {height:30px;}
+#show_data {border-radius:5px;}
+
+/*font color*/
+.whiteWord1 {color: #FFFFFF}
+.GrayWord1{color: #666666}
+.GrayWord2{color:#B0B0B0}
+.GrayWord3{color: #999999}
+.blueWord1{color:#3366CC; }
+.blueWord2{color:#85ADF8; }
+.redWord1{color:#FF3333;}
+.greenWord1{color:#499251;}
+.greenWord2{color:#339966;}
+.orangeWord{ color:#FF6633;}
+.selchkbg{ background-color:#FFCC33;}
+
+/*bgColor*/
+.blueCrayBg1{background-color:#ECEEF4;}
+.markBg1{background-color:#FFFF66;}
+
+/*img filter*/
+.imgOpacity20{
+  -webkit-filter: opacity(20%); /* Safari 6.0 - 9.0 */
+  filter: opacity(20%);
+}
+.imgOpacity50{
+  -webkit-filter: opacity(50%); /* Safari 6.0 - 9.0 */
+  filter: opacity(50%);
+}
+
+.imgCray{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+/*mouse pointer*/
+.mouseDisabled{ cursor:not-allowed;}
+.mouseHand{ cursor:pointer;}
+
+/*button style*/
+.btnOrange{background-color:#FF6633; color:#FFFFFF;border:0px; cursor:pointer;}
+.btnGreen{background:#4AB389; color:#FFFFFF; border:0px;cursor:pointer;}
+.btnBlue{background:#6699FF; color:#FFFFFF; border:0px;cursor:pointer;}
+
+/*div 箭頭*/
+.arrowU{
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 5px 7.5px 5px;
+border-color: transparent transparent #ffffff transparent;
+}
+.arrowD{
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 7.5px 5px 0 5px;
+border-color: #ffffff transparent transparent transparent;
+}
+.arrowL{
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 6px 10px 6px 0;
+border-color: transparent #ffffff transparent transparent;
+}
+.arrowR{
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 6px 0 6px 10px;
+border-color: transparent transparent transparent #ffffff;
+}
+
+.IBW{display:inline-block;}
+.FRW{float:right;}
+
+/*圖片轉動方向*/
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.rotate180 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.rotate270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+
+/*show_less & more css*/
+.article {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-color:#FFFFFF;
+}
+
+.article:after {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(to top,
+     rgba(255,255,255, 1) 20%,
+     rgba(255,255,255, 0) 80%
+  );
+  pointer-events: none; /* so the text is still selectable */
+}
+
+.article:hover:after {
+  background: transparent;
+}
+
+.article:hover,article:active {
+  height:auto;
+}
+
+/*show_less more jQuery DIV 內最後面要加一個 DIV & id="母DIV名_SL"  */
+.articleX{
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-color:#FFFFFF;
+  /*
+  padding: 5px;
+  height:70px;
+  border:2px solid #CCCCCC;
+  border-radius:5px;
+  */
+}
+
+.show_less{
+
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(to top,
+     rgba(255,255,255, 1) 20%,
+     rgba(255,255,255, 0) 80%
+  );
+  pointer-events: none; /* so the text is still selectable */
+
+}
+
+.auto_height{height:auto;}
+
+/*禁止選取文字*/
+
+.noselect {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.uCHK{
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 2px;
+  vertical-align:middle;
+}
+
+/*radio css =================================*/
+/* Customize the label (the container) */
+.myRadio {
+  display:inline-block;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.myRadio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 50%;
+  border:1px #999999 solid;
+}
+
+/* On mouse-over, add a grey background color */
+.myRadio:hover input ~ .radiomark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.myRadio input:checked ~ .radiomark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radiomark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.myRadio input:checked ~ .radiomark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.myRadio .radiomark:after {
+  top: 6px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* end radio css===========================================*/
+
+/* checkbox css ===========================================*/
+
+/* Customize the label (the container) */
+.myCheckbox {
+  display:inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.myCheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border:1px #999999 solid;
+  border-radius:3px;
+}
+
+/* On mouse-over, add a grey background color */
+.myCheckbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.myCheckbox input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.myCheckbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.myCheckbox .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* end checkbox css =======================================*/
+
+.sReadTag{ display:inline-block; min-width:20px; min-height:22px; background-color:#FF3333; color:#FFFFFF; border:0px solid #FFFFFF; text-align:center; line-height:22px; vertical-align:middle; padding-left:1px; padding-right:1px;}
+
+/*stand layout css 20200104*/
+.cHead{ height:35px; background-image:url(../themes/ADV/admin/admin_bar.jpg); background-repeat:no-repeat; background-size:auto 100%; background-color:#3399FF; overflow:auto;}
+.cHead1{ height:35px; background-size:auto 100%; background-color:#3c6abc; overflow:auto;}
+.cInfo{ height:30px; overflow:auto;}
+.cData{
+  position:relative;
+  width:100%;
+  padding-bottom:5px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.cFoot{position:absolute; z-index:99; bottom:0px; left:0px; width:calc(100% - 2px);width:-webkit-calc(100% - 2px); background-color:#FFFFFF;}
+
+/*chrome scrollbar css*/
+.scroll1::-webkit-scrollbar {
+  width: 5px;
+}
+.scroll1::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.scroll1::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+.TAC{text-align:center;}
+.TAR{text-align:right;}
+.VAM{vertical-align:middle;}
+.WBBA{word-break:break-all;}
+.WBBW{word-break:break-word;}
+
+/*toggle switch ---------------------------------*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*防止元件邊緣 margin or padding 溢出  2020/11/04  */
+textarea,input[type="text"],[type="date"]{
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+}
+
+
+
+
+/*-------------------------*/
